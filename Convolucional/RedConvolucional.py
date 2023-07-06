@@ -131,8 +131,8 @@ maty_train = maty_train.astype('float32')
 maty_val = maty_val.astype('float32')
 #type(maty)
 
-yuca = f'Prueba{version}.log'
-csv_logger = CSVLogger(yuca)
+versionRegistro= f'Prueba{version}.log'
+csv_logger = CSVLogger(versionRegistro)
 m1 = model.fit(tensor_ent, maty_train, epochs=2000, validation_data=(tensor_val, maty_val), callbacks=[csv_logger])
 
 
